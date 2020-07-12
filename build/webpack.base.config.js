@@ -12,7 +12,6 @@ let baseConfig = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'js/[name].js',
-    publicPath: ''
   },
 
   module: {
@@ -28,7 +27,6 @@ let baseConfig = {
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: [
-
           {
             loader: 'url-loader',
             options: {
@@ -37,7 +35,14 @@ let baseConfig = {
             }
           }
         ]
-
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-withimg-loader',
+          }
+        ]
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,

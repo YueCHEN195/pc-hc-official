@@ -1,6 +1,36 @@
 .page-container{
-  .banner-pic{
-    background: url("../images/pc/index/pc-background@2x.png");
+  .banner{
+    position: relative;
+    background: url("../images/pc/index/pc-background@2x.png") center no-repeat;
+    background-size: 100% 100%;
     height: 652px;
+    .banner-inside-title{
+      position: absolute;
+      width: 708px;
+      height: 111px;
+      left: 50%;
+      top: 35%;
+      transform: translate(-50%, -50%);
+    }
+    .banner-inside-logo{
+      position: absolute;
+      background: url("../images/pc/index/Group7@2x.png") center no-repeat;
+      background-size: 100% 100%;
+      width: 169px;
+      height: 51px;
+      top: 2.3%;
+      left: 12%;
+    }
   }
+
+  .page-title{
+    margin-top: 26px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+
 }
